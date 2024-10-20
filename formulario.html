@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Contato</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        fieldset {
+            border: 1px solid #007bff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        legend {
+            font-size: 1.5em;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Formulário de Contato</h1>
+        <form id="contactForm" novalidate>
+            <fieldset>
+                <legend>Informações Pessoais</legend>
+
+                <div class="form-group">
+                    <label for="firstName">Nome:</label>
+                    <input type="text" class="form-control" id="firstName" required>
+                    <div class="invalid-feedback">Por favor, insira seu nome.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">Sobrenome:</label>
+                    <input type="text" class="form-control" id="lastName" required>
+                    <div class="invalid-feedback">Por favor, insira seu sobrenome.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Telefone:</label>
+                    <input type="tel" class="form-control" id="phone" pattern="^\(\d{2}\) \d{5}-\d{4}$" placeholder="(XX) XXXXX-XXXX" required>
+                    <div class="invalid-feedback">Por favor, insira um telefone válido.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" class="form-control" id="email" required>
+                    <div class="invalid-feedback">Por favor, insira um e-mail válido.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Mensagem:</label>
+                    <textarea class="form-control" id="message" rows="4" required></textarea>
+                    <div class="invalid-feedback">Por favor, insira uma mensagem.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="language">Língua Aplicada:</label>
+                    <select class="form-control" id="language" required>
+                        <option value="">Escolha...</option>
+                        <option value="english">Inglês</option>
+                        <option value="spanish">Espanhol</option>
+                        <option value="french">Francês</option>
+                        <option value="portuguese">Português (pt-br)</option>
+                    </select>
+                    <div class="invalid-feedback">Por favor, escolha uma língua.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="fileUpload">Upload do Protótipo:</label>
+                    <input type="file" class="form-control-file" id="fileUpload" accept=".pdf, .doc, .docx, .jpeg, .png" required>
+                    <div class="invalid-feedback">Por favor, faça o upload de um arquivo válido.</div>
+                </div>
+
+                <div class="form-group">
+                    <label>Linguagens Preferidas:</label>
+                    <div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="html" id="langHtml">
+                            <label class="form-check-label" for="langHtml">HTML</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="css" id="langCss">
+                            <label class="form-check-label" for="langCss">CSS</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="javascript" id="langJs">
+                            <label class="form-check-label" for="langJs">JavaScript</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="python" id="langPython">
+                            <label class="form-check-label" for="langPython">Python</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Banco de Dados Recomendado:</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="database" id="mysql" value="mysql" required>
+                        <label class="form-check-label" for="mysql">MySQL</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="database" id="mongodb" value="mongodb" required>
+                        <label class="form-check-label" for="mongodb">MongoDB</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="database" id="postgresql" value="postgresql" required>
+                        <label class="form-check-label" for="postgresql">PostgreSQL</label>
+                    </div>
+                    <div class="invalid-feedback">Por favor, escolha um banco de dados.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="meetingShift">Turno Preferido para Reuniões:</label>
+                    <select class="form-control" id="meetingShift" required>
+                        <option value="">Escolha...</option>
+                        <option value="morning">Manhã</option>
+                        <option value="afternoon">Tarde</option>
+                        <option value="evening">Noite</option>
+                    </select>
+                    <div class="invalid-feedback">Por favor, escolha um turno.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="meetingTime">Melhor Horário Sugerido para Reuniões:</label>
+                    <input type="time" class="form-control" id="meetingTime" required>
+                    <div class="invalid-feedback">Por favor, insira um horário.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="deliveryDate">Previsão de Entrega Desejada:</label>
+                    <input type="date" class="form-control" id="deliveryDate" required>
+                    <div class="invalid-feedback">Por favor, insira uma data.</div>
+                </div>
+
+                <button type="reset" class="btn btn-secondary">Limpar</button>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </fieldset>
+        </form>
+    </div>
+
+    <script>
+        // Validação do formulário
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                var form = document.getElementById('contactForm');
+                form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            }, false);
+        })();
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
