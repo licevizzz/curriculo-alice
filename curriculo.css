@@ -32,3 +32,48 @@ tr:nth-child(even) {
 #Apresentação {
     text-align: center;
 }
+ /* Estilo básico para o layout */
+ body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Estilo para os botões */
+.navegacao button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Centralizando o conteúdo */
+.center {
+    text-align: center;
+}
+
+/* Estilo para as seções */
+section {
+    padding: 20px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilo para links não visitados */
+a {
+    color: blue; /* Cor do link normal */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+/* Estilo para links visitados */
+a:visited {
+    color: purple; /* Cor do link visitado */
+}
+
+/* Estilo para links ao passar o mouse */
+a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
